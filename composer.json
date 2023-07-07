@@ -1,0 +1,16 @@
+{
+    "name": "gioco-plus/ninew-contract",
+    "autoload": {
+        "psr-4": {
+            "GiocoPlus\\NINEW\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shun",
+            "email": "Ys.Cheng@goldenf.co"
+        }
+    ],
+    "require": {}
+}
