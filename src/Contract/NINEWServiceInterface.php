@@ -37,5 +37,5 @@ interface NINEWServiceInterface {
      * @param string $account
      * @return mixed
      */
-    function getBalance(string $opCode, string $account): mixed;
+    function getBalance(string $opCode, string $account);
 }
