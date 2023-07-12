@@ -33,10 +33,10 @@ interface NINEWServiceInterface {
 
     /**
      * 取得錢包餘額
-     * @param string $op_code
+     * @param string $opCode
      * @param string $account
-     * @param string $vendor_code
+     * @param string $vendorCode
      * @return mixed
      */
-    function getBalance(string $op_code, string $account, string $vendor_code);
+    function getBalance(string $opCode, string $account, string $vendorCode);
 }
