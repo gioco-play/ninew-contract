@@ -43,18 +43,16 @@ interface NINEWServiceInterface {
      * 遊戲上分
      * @param string $opCode
      * @param string $account
-     * @param string $vendorCode
      * @return mixed
      */
-    function gameTransferIn(string $opCode, string $account, string $vendorCode);
+    function gameTransferIn(string $opCode, string $account);
 
     /**
      * 遊戲下分
      * @param string $opCode
      * @param string $account
      * @param float $amount
-     * @param string $vendorCode
      * @return mixed
      */
-    function gameTransferOut(string $opCode, string $account, float $amount, string $vendorCde);
+    function gameTransferOut(string $opCode, string $account, float $amount);
 }
