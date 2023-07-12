@@ -35,8 +35,7 @@ interface NINEWServiceInterface {
      * 取得錢包餘額
      * @param string $opCode
      * @param string $account
-     * @param string $vendorCode
      * @return mixed
      */
-    function getBalance(string $opCode, string $account, string $vendorCode);
+    function getBalance(string $opCode, string $account): mixed;
 }
