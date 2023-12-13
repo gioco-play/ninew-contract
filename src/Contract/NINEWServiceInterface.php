@@ -14,7 +14,7 @@ interface NINEWServiceInterface {
     function gameLaunch(string $opCode, string $account, string $gameCode, ?string $backUrl = null): array;
 
     /**
-     * 營商帳號轉換為遊戲商帳號
+     * 營商帳號轉換為遊戲商帳號 (GF -> NINEW)
      * @param string $opCode
      * @param array $vendor
      * @param string $memberCode
@@ -23,7 +23,7 @@ interface NINEWServiceInterface {
     function accountToVendor(string $opCode, array $vendor, string $memberCode): array;
 
     /**
-     * 遊戲商帳號轉換為營商帳號
+     * 遊戲商帳號轉換為營商帳號 (NINEW -> GF)
      * @param string $opCode
      * @param array $vendor
      * @param string $vendorAccount
@@ -55,4 +55,39 @@ interface NINEWServiceInterface {
      * @return mixed
      */
     function gameTransferOut(string $opCode, string $account, float $amount);
+
+    /**
+     * 上/下分失敗 訂單檢核
+     * @param string $op_code
+     * @param string $order_no
+     * @return mixed
+     */
+    function orderFailCheck(string $op_code, string $order_no);
+
+    /**
+     * 遊戲詳情
+     * @param string $op_code
+     * @param string $account
+     * @param string $bet_id
+     * @return mixed
+     */
+    function gameDetail(string $op_code, string $account, string $bet_id);
+
+    /**
+     * 抓取遊戲紀錄
+     *
+     * @param string $op_code
+     * @param int $past_minutes
+     * @param string $cache_key
+     * @return mixed
+     */
+    function betLogGrabber(string $op_code, int $past_minutes, string $cache_key);
+
+    /**
+     * 全營商 抓取遊戲紀錄
+     *
+     * @param int $past_minutes
+     * @return mixed
+     */
+    function betLogGrabberAll(int $past_minutes);
 }
