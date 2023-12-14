@@ -11,7 +11,7 @@ interface NINEWServiceInterface {
      * @param ?string $backUrl
      * @return array
      */
-    function gameLaunch(string $opCode, string $account, string $gameCode, ?string $backUrl = null): array;
+    function gameLaunch(string $opCode, string $account, string $gameCode, string $backUrl = ""): array;
 
     /**
      * 營商帳號轉換為遊戲商帳號 (GF -> NINEW)
